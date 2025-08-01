@@ -1,0 +1,122 @@
+.navbar {
+  width: 100%;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+    margin: 0 12px;
+   
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    margin-right: 4rem;
+  }
+
+  &__search {
+    flex: 1;
+    margin-left: 7rem;
+
+    .search__group {
+      display: flex;
+      max-width: 600px;
+      width: 100%;
+
+      input {
+        width: 100%;
+        padding: 1rem 1rem;
+        font-size: 0.875rem;
+        border: 2px solid #d1d5db;
+        background-color: #f0f2f5;
+        border-radius: 0.5rem 0 0 0.5rem;
+        outline: none;
+
+        &:focus {
+          border-color: #14b8a6;
+        }
+      }
+
+      button {
+        background-color: #2dd4bf;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 0.5rem 0.5rem 0;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+          background-color: #059669;
+        }
+
+        .search__icon {
+          color: white;
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-size: 1rem;
+    flex-shrink: 0;
+
+    .navbar__doc {
+      display: none;
+    text-decoration: underline;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+
+    .navbar__bell {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+
+    .navbar__profile {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+
+      .img {
+        border-radius: 9999px;
+        object-fit: cover;
+        width: 48px;
+        height: 48px;
+      }
+
+      .profile__name {
+        display: none;
+
+        @media (min-width: 768px) {
+          display: block;
+        }
+      }
+
+      .dropdown__icon {
+        width: 1rem;
+        height: 1rem;
+        color: #4b5563;
+      }
+    }
+  }
+}

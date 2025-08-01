@@ -1,0 +1,47 @@
+
+  .details {
+    background: #ffffff;
+    padding: 1rem;
+    color: #213F7D;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+
+    
+     section {
+        margin: 1rem;
+
+
+      h4 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1rem;
+        border-bottom: 1px solid rgba(33, 63, 125, 0.2);
+      
+
+        
+
+        div {
+        
+          padding-bottom: 2rem ;
+          label {
+            text-transform: uppercase;
+            display: block;
+            font-size: 12px;
+            margin-bottom: 0.25rem;
+
+          }
+
+          p {
+            font-size: 1rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }

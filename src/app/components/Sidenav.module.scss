@@ -1,0 +1,63 @@
+.sidenav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 250px;
+  background-color: #ffffff;
+  overflow-y: visible;
+  transition: transform 0.3s ease;
+  transform: translateX(0); 
+  color: #213F7D;
+  
+
+  &--open {
+    transform: translateX(0);
+  }
+
+  &__group {
+    margin-bottom: 1rem;
+
+    &_header {
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+
+    &_items {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
+      padding-left: 0.5rem;
+     
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      color: #213F7D;
+      background-color:rgba(57, 205, 204, 0.2);
+      border-left: 3px solid #102e2e;
+    }
+
+    &.active {
+      background-color: #f0f4ff;
+      border-left: 3px solid #102e2e;
+       background-color:rgba(57, 205, 204, 0.2);
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}

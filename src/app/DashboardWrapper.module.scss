@@ -1,0 +1,14 @@
+.layoutContainer {
+  background-color: #f9fafb; 
+  min-height: 100vh;
+}
+
+.layoutMain {
+  display: flex;
+  height: 100%;
+}
+
+.layoutContent {
+  flex: 1;
+  padding: 1rem; 
+}

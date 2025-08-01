@@ -1,0 +1,148 @@
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 1rem 1rem;
+}
+
+.logoContainer {
+  margin-bottom: 4rem;
+  margin-left: 10rem;
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-start;
+  
+   @media (max-width: 720px) {
+    margin-bottom: 0;    
+    align-self: flex-start;
+  }
+}
+
+.logo {
+  width: 16rem;
+  height: auto;
+}
+
+.contentWrapper {
+  width: 100%;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+}
+
+.leftImage {
+  width: auto;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
+ 
+}
+
+.illustration {
+  width: 100%;
+
+}
+
+.formWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: 1024px) {
+    width: 50%;
+  }
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  
+}
+
+.subtext {
+  color: #545F7D;
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
+}
+
+.form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.input,
+.loginButton {
+  width: 100%;
+  padding: 1.25rem;
+  font-size: 1.125rem;
+  border-radius: 0.15rem;
+  box-sizing: border-box;
+  display: block;
+  border: solid 2px rgba(84, 95, 125, 0.15);
+  
+  &::placeholder{
+   color: rgba(84, 95, 125, 1);
+   font-size:14px
+  }
+ 
+  &:focus {
+    border: solid 2px #2dd4bf; 
+    outline: none; 
+  }
+}
+
+
+.passwordWrapper {
+  position: relative;
+}
+
+.toggleButton {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #14b8a6; // Tailwind's teal-500
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.forgotPassword {
+  font-size: 1rem;
+  color: #2dd4bf; // Tailwind's teal-400
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.loginButton {
+
+  background-color: #2dd4bf; // teal-400
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: #2dd4bf;
+  }
+}

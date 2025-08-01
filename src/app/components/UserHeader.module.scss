@@ -1,0 +1,39 @@
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .back {
+      font-weight: 400;
+      cursor: pointer;
+      
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: #ffffff;
+
+        &.blacklist {
+
+          color: #E4033B;
+          border: 1px solid #E4033B;
+        }
+
+        &.activate {
+
+          color: #39CDCC;
+          border: 1px solid #39CDCC;
+        }
+      }
+    }
+  }

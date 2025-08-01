@@ -1,0 +1,33 @@
+.cardFeatureWrapper {
+  padding: 2rem;
+  margin: 0 auto;
+  color: #213F7D;
+  font-size: 14px
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  color: #545F7D;
+}
+
+.gridContainer {
+  display: grid;
+  gap: 1.5rem;
+
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

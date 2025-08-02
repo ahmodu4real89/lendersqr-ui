@@ -2,13 +2,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin: 2rem 0;
+    font-size: 24px;
+    font-weight: 500;
 
     .back {
       font-weight: 400;
       cursor: pointer;
-      
+      margin-bottom: 80px;
+      font-size: 1rem;
     }
+
 
     .actions {
       display: flex;
@@ -17,7 +21,8 @@
       button {
         padding: 0.5rem 1rem;
         border-radius: 8px;
-        font-weight: 700;
+        font-weight: 600;
+        letter-spacing: 10%;
         border: none;
         cursor: pointer;
         font-size: 14px;

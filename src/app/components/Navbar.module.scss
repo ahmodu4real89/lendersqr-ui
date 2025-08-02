@@ -5,34 +5,43 @@
   top: 0;
   z-index: 50;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 1.5rem;
-    margin: 0 12px;
-   
+    margin: 0 auto;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   &__logo {
     flex-shrink: 0;
-    margin-right: 4rem;
   }
 
   &__search {
-    flex: 1;
-    margin-left: 7rem;
+    flex: 1 1 auto;
+    max-width: 600px;
+    margin-left: 2rem;
+
+    @media (max-width: 1024px) {
+      margin-left: 0;
+      width: 100%;
+    }
 
     .search__group {
       display: flex;
-      max-width: 600px;
       width: 100%;
 
       input {
-        width: 100%;
-        padding: 1rem 1rem;
+        flex: 1;
+        padding: 0.75rem 1rem;
         font-size: 0.875rem;
         border: 2px solid #d1d5db;
         background-color: #f0f2f5;
@@ -65,50 +74,38 @@
         }
       }
     }
+
   }
 
   &__right {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     font-size: 1rem;
     flex-shrink: 0;
 
+
     .navbar__doc {
-      display: none;
-    text-decoration: underline;
+      text-decoration: underline;
 
-      @media (min-width: 768px) {
-        display: block;
-      }
     }
 
-    .navbar__bell {
-      display: none;
-
-      @media (min-width: 768px) {
-        display: block;
-      }
-    }
 
     .navbar__profile {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.75rem;
       cursor: pointer;
 
       .img {
         border-radius: 9999px;
         object-fit: cover;
-        width: 48px;
-        height: 48px;
-      }
-
-      .profile__name {
-        display: none;
+        width: 40px;
+        height: 40px;
 
         @media (min-width: 768px) {
-          display: block;
+          width: 48px;
+          height: 48px;
         }
       }
 
@@ -118,5 +115,17 @@
         color: #4b5563;
       }
     }
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 775px) {
+      width: 90%;
+    }
+
   }
 }

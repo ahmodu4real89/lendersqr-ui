@@ -3,7 +3,7 @@ import { DataTable } from "./data-table"
 
 async function getData(): Promise<UserDetails[]> {
   
- const response = await fetch('http://localhost:4000/api/users');
+ const response = await fetch('https://lends-test-1.onrender.com/api/users');
   const data  = await response.json()
   return data
 }

@@ -47,9 +47,9 @@ export interface UserDetails {
 
 const UserDetails = async ({ id }: Props) => {
     console.log(id)
-    const response = await fetch(`http://localhost:4000/api/users/${id}`)
+    const response = await fetch(`https://lends-test-1.onrender.com/api/users/${id}`)
      const data: UserDetails = await response.json()
-     console.log(data)
+    
     
     
 

@@ -20,10 +20,14 @@ const LandingPage = () => {
     return (
         <div className={styles.container}>
             <div className={styles.logoContainer}>
-                <Image src='/logo.svg' alt="Company Logo"
+                <Image 
+                 priority
+                src='/logo.svg' 
+                alt="Company Logo"
                  width={50}
                    height={50}
                     className={styles.logo} />
+                     
             </div>
 
             
@@ -31,6 +35,7 @@ const LandingPage = () => {
                 
                 <div className={styles.leftImage}>
                     <Image
+                      priority
                      src="/sign.svg"
                       alt="Illustration"
                        width={400}

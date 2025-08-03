@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import './Card.scss'
+import style from './Card.module.scss'
 
 type FeatureCardProps = {
   imageSrc: string
@@ -9,10 +9,10 @@ type FeatureCardProps = {
 
 const Card = ({ imageSrc, title, description }: FeatureCardProps) => {
   return (
-    <div className="card">
-      <Image src={imageSrc} alt={title} width={50} height={50}  className="card__image" />
-      <h3 className="card__title">{title}</h3>
-      <p className="card__description">{description}</p>
+    <div className={style.card}>
+      <Image src={imageSrc} alt={title} width={50} height={50}  className={style.card__image} />
+      <h3 className={style.card__title}>{title}</h3>
+      <p className={style.card__description}>{description}</p>
     </div>
   )
 }

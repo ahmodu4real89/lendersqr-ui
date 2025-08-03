@@ -1,12 +1,21 @@
-
 'use client'
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from './landingPage.module.scss';
-import Link from "next/link";
 import Image from 'next/image'
+import { useRouter } from "next/navigation";
+
 const LandingPage = () => {
     const [showPassword, setShowPassword] = useState(false);
+      const router = useRouter()
+   useEffect(() => {
+    router.prefetch('/dashboard');
+  }, [router]);
+
+  
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push('/dashboard'); 
+  };
 
     return (
         <div className={styles.container}>
@@ -34,7 +43,7 @@ const LandingPage = () => {
                     <h2 className={styles.heading}>Welcome!</h2>
                     <p className={styles.subtext}>Enter your details to login</p>
 
-                    <form className={styles.form}>
+                    <form className={styles.form} onSubmit={handleLogin}>
                         <input type="email" placeholder="Email" className={styles.input} />
 
                         <div className={styles.passwordWrapper}>
@@ -54,9 +63,9 @@ const LandingPage = () => {
 
                         <a href="#" className={styles.forgotPassword}>Forgot password?</a>
 
-                        <Link href={'/dashboard'}>
+                        
                         <button type="submit" className={styles.loginButton}>LOG IN</button>
-                        </Link>
+                    
                     </form>
                 </div>
             </div>

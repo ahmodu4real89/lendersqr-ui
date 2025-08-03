@@ -7,7 +7,7 @@ interface Props {
 
 
 export interface UserDetails {
-   _id: string;
+  _id: string;
   personalInformation: {
     username: string
     organization: string;
@@ -46,16 +46,15 @@ export interface UserDetails {
 
 
 const UserDetails = async ({ id }: Props) => {
-    console.log(id)
-    const response = await fetch(`https://lends-test-1.onrender.com/api/users/${id}`)
-     const data: UserDetails = await response.json()
-    
-    
-    
+  console.log(id)
+  const response = await fetch(`https://lends-test-1.onrender.com/api/users/${id}`, {
+    cache: 'force-cache'
+  })
+  const data: UserDetails = await response.json()
 
   return (
     <>
-       <UserDetailSection
+      <UserDetailSection
         title="Personal Information"
         items={[
           { label: "FULL NAME", value: data?.personalInformation?.full_name ?? '' },
@@ -81,7 +80,7 @@ const UserDetails = async ({ id }: Props) => {
           { label: "Monthly Income", value: data?.educationAndEmployment?.monthly_income ?? "" },
           { label: "Loan Repayment", value: data?.educationAndEmployment?.loan_repayment ?? "" },
         ]}
-      /> 
+      />
 
       <UserDetailSection
         title="Socials"
@@ -100,11 +99,11 @@ const UserDetails = async ({ id }: Props) => {
           { label: "Email Address", value: data?.guarantors?.[0]?.email_address ?? "" },
           { label: "Relationship", value: data?.guarantors?.[0]?.relationship ?? "" },
         ]}
-      /> 
+      />
 
-    
+
     </>
-  ); 
-}; 
+  );
+};
 
 export default UserDetails;
